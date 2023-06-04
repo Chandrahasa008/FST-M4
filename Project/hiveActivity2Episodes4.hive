@@ -1,0 +1,4 @@
+INSERT OVERWRITE DIRECTORY '/user/chandra/output'
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
+SELECT COUNT(*) FROM episodeIV WHERE INSTR(line, 'Luke')>0;
+dfs -get /user/chandra/output /root/output
